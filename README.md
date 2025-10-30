@@ -11,22 +11,22 @@
 2. For each experiment:
    SQL queries based on questions generated randomly from Moodle.
    - Complete the question on Moodle.
-   - Each experiment folder contains **two Markdown files**
-     1. `README.md`
+   - Each experiment folder contains *two Markdown files*
+     1. README.md
 
         This file contains:
-         - 🎯 **Aim**
-         - 📚 **Theory**
-         - 📝 **Result**
+         - 🎯 *Aim*
+         - 📚 *Theory*
+         - 📝 *Result*
         
-        You **do not need to edit** this file unless instructed.
-      3. `output.md`
+        You *do not need to edit* this file unless instructed.
+      3. output.md
 
-         You **must update this file** with your answers and outputs.
+         You *must update this file* with your answers and outputs.
          For each of the 10 Moodle-generated questions:
-         - Paste the **question**
-         - Write the **SQL query** inside the code block
-         - Paste a **screenshot or terminal output** below it
+         - Paste the *question*
+         - Write the *SQL query* inside the code block
+         - Paste a *screenshot or terminal output* below it
 3. Commit and push your changes.
 4. Create a pull request to the original repository
 
