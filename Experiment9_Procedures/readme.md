@@ -1,5 +1,5 @@
 # Experiment 9: PL/SQL – Procedures and Functions
-
+## VIMALA RANI A-212223040240
 ## AIM
 To understand and implement procedures and functions in PL/SQL for performing various operations such as calculations, decision-making, and looping.
 
@@ -60,8 +60,26 @@ Key Differences:
 - Use `DBMS_OUTPUT.PUT_LINE` to display the result.
 - Call the procedure with a number as input.
 
+#### Program:
+```
+CREATE OR REPLACE PROCEDURE find_square (num IN NUMBER)
+IS
+   result NUMBER;
+BEGIN
+   result := num * num;
+   DBMS_OUTPUT.PUT_LINE('Square of ' || num || ' is ' || result);
+END;
+```
+
+```
+EXEC find_square(6);
+```
+
 **Expected Output:**  
 Square of 6 is 36
+
+<img width="1277" height="715" alt="image" src="https://github.com/user-attachments/assets/5a8dad37-36f9-43aa-9f2f-2324227483d2" />
+
 
 ---
 
@@ -74,8 +92,30 @@ Square of 6 is 36
 - Return the result using the `RETURN` statement.
 - Call the function using a `SELECT` statement or in an anonymous block.
 
+#### Program:
+```
+CREATE OR REPLACE FUNCTION get_factorial (n IN NUMBER)
+RETURN NUMBER
+IS
+   fact NUMBER := 1;
+BEGIN
+   FOR i IN 1..n LOOP
+      fact := fact * i;
+   END LOOP;
+   RETURN fact;
+END;
+```
+```
+BEGIN
+   DBMS_OUTPUT.PUT_LINE('Factorial of 5 is ' || get_factorial(5));
+END;
+```
+
 **Expected Output:**  
 Factorial of 5 is 120
+
+<img width="1303" height="702" alt="image" src="https://github.com/user-attachments/assets/abb45a21-4c58-4b22-95ac-fff4a12665bb" />
+
 
 ---
 
@@ -87,8 +127,27 @@ Factorial of 5 is 120
 - Use the `MOD` function to check if the number is divisible by 2.
 - Display whether it is Even or Odd using `DBMS_OUTPUT.PUT_LINE`.
 
+#### Program:
+```
+CREATE OR REPLACE PROCEDURE check_even_odd (n IN NUMBER)
+IS
+BEGIN
+   IF MOD(n, 2) = 0 THEN
+      DBMS_OUTPUT.PUT_LINE(n || ' is Even');
+   ELSE
+      DBMS_OUTPUT.PUT_LINE(n || ' is Odd');
+   END IF;
+END;
+```
+```
+EXEC check_even_odd(12);
+```
+
 **Expected Output:**  
 12 is Even
+
+<img width="1353" height="757" alt="image" src="https://github.com/user-attachments/assets/935dfd98-8075-46de-b7d2-9d795ea4236f" />
+
 
 ---
 
@@ -101,8 +160,32 @@ Factorial of 5 is 120
 - Return the reversed number.
 - Call the function and display the output.
 
+#### Program:
+```
+CREATE OR REPLACE FUNCTION reverse_number (n IN NUMBER)
+RETURN NUMBER
+IS
+   rev NUMBER := 0;
+   temp NUMBER := n;
+BEGIN
+   WHILE temp > 0 LOOP
+      rev := rev * 10 + MOD(temp, 10);
+      temp := TRUNC(temp / 10);
+   END LOOP;
+   RETURN rev;
+END;
+```
+```
+BEGIN
+   DBMS_OUTPUT.PUT_LINE('Reversed number of 1234 is ' || reverse_number(1234));
+END;
+```
+
 **Expected Output:**  
 Reversed number of 1234 is 4321
+
+<img width="1297" height="703" alt="image" src="https://github.com/user-attachments/assets/387d412b-4f4a-4515-bb79-05be3ddc6a78" />
+
 
 ---
 
@@ -114,6 +197,21 @@ Reversed number of 1234 is 4321
 - Use a loop from 1 to 10 to multiply the input number.
 - Display the multiplication results using `DBMS_OUTPUT.PUT_LINE`.
 
+#### Program:
+```
+CREATE OR REPLACE PROCEDURE print_table (n IN NUMBER)
+IS
+BEGIN
+   DBMS_OUTPUT.PUT_LINE('Multiplication table of ' || n || ':');
+   FOR i IN 1..10 LOOP
+      DBMS_OUTPUT.PUT_LINE(n || ' x ' || i || ' = ' || (n * i));
+   END LOOP;
+END;
+```
+```
+EXEC print_table(5);
+```
+
 **Expected Output:**  
 Multiplication table of 5:  
 5 x 1 = 5  
@@ -122,5 +220,11 @@ Multiplication table of 5:
 ...  
 5 x 10 = 50
 
+<img width="1388" height="710" alt="image" src="https://github.com/user-attachments/assets/50b479ac-70b7-4c7f-88df-574af884340f" />
+
+
+---
+
 ## RESULT
 Thus, the PL/SQL programs using procedures and functions were written, compiled, and executed successfully.
+VVV
