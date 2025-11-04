@@ -180,6 +180,9 @@ AND PAYMENT_AMT <3000;
 #### Output: 
 
 ![image](https://github.com/user-attachments/assets/52bb6307-d7f1-40cf-b5c4-3ddcd43161da)
+#### Module 2 grade:
+<img width="1919" height="1079" alt="Screenshot 2025-11-04 101205" src="https://github.com/user-attachments/assets/f277f19e-aece-40fd-8248-3206550d1e82" />
+
 
 
 ## RESULT
