@@ -276,6 +276,9 @@ PRIMARY KEY (item_id, ord_date)
 #### Output:
 
 ![image](https://github.com/user-attachments/assets/c5d597ef-d573-4a65-8c1d-acfb0c9cba3e)
+#### Module 1 Grade:
+<img width="1919" height="1079" alt="Screenshot 2025-11-04 101153" src="https://github.com/user-attachments/assets/eb1442c0-3c31-480a-82b0-36149c9e8ce4" />
+
 
 
 
